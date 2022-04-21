@@ -24,18 +24,21 @@ public class Family {
     //endregion
 
     //region ხელფასების დანიშნვა
+    double decreaseSalaryBy = 0;
+
+    if (underageMembersOfTheFamily > Government.numberOfUnderAgeMembersOfFamily - 1) {
+      // მრავალშვილიანი ოჯახია
+      decreaseSalaryBy = Government.percentageForLargeFamily;
+    } else {
+      // არ არის მრავალშვილიანი ოჯახი
+      decreaseSalaryBy = Government.standardPercentage;
+    }
+
     for (int i = 0; i < people.length; i++) {
       var eachPerson = getPeople().get(i);
-      if (underageMembersOfTheFamily > Government.numberOfUnderAgeMembersOfFamily - 1) {
-        var eachPersonOldSalary = eachPerson.getSalary();
-        eachPerson.setSalaryByPercentage(Government.percentageForLargeFamily);
-        Government.setBudget(Government.getBudget() + eachPersonOldSalary - eachPerson.getSalary());
-      } else {
-        var eachPersonOldSalary = eachPerson.getSalary();
-        eachPerson.setSalaryByPercentage(Government.standardPercentage);
-        Government.setBudget(Government.getBudget() + eachPersonOldSalary - eachPerson.getSalary());
-      }
-
+      var eachPersonOldSalary = eachPerson.getSalary();
+      eachPerson.setSalaryByPercentage(decreaseSalaryBy);
+      Government.setBudget(Government.getBudget() + eachPersonOldSalary - eachPerson.getSalary());
     }
     //endregion
 
