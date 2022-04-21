@@ -52,8 +52,8 @@ public class Main {
     System.out.println("მთავრობის საბოლოო ბიუჯეტი: " + Government.getBudget());
     System.out.println();
     System.out.println("მითითებული კომპანიის თანამშრომელთა საშუალო ხელფასი: "+ Company.companyEmployeesSum(ვიბარებთ_ბინებს));
-    System.out.println("ყველა თანამშრომლის საშუალო ხელფასი: " + Person.emplyeesAverageSalary()); //TODO
-    System.out.println("არაცარიელი კომპანიების მინიმალური ხელფასების საშუალო " + Person.companysAverageMinimumSalary()); //TODO
+    System.out.println("ყველა თანამშრომლის საშუალო ხელფასი: " + Person.employeesAverageSalary()); //TODO
+    System.out.println("არაცარიელი კომპანიების მინიმალური ხელფასების საშუალო " + Person.companyAverageMinimumSalary()); //TODO
     //endregion
 
   }

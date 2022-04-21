@@ -83,11 +83,11 @@ public class Person {
 
 
   //region მეთოდები
-  public static double emplyeesAverageSalary() {
+  public static double employeesAverageSalary() {
     return salarySum / counter;
   }
 
-  public static double companysAverageMinimumSalary() {
+  public static double companyAverageMinimumSalary() {
     return (double) companySalarySum / counter;
   }
 

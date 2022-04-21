@@ -17,7 +17,7 @@ public class Family {
     int underageMembersOfTheFamily = 0;
     for (int i = 0; i < people.length; i++) {
       var eachPerson = getPeople().get(i);
-      if (eachPerson.getAge() < Government.underAgeNumber) {
+      if (eachPerson.getAge() < Government.getUnderAgeNumber()) {
         underageMembersOfTheFamily++;
       }
     }
